@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoolSite</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+
+<body>
+  <nav style="border: 2px solid black; border-radius: 15px; background-color:rgba(203, 189, 189, 0.15);margin-top:10px">
+    <a href="{{ url_for('main')}}" style="color:black;padding-left:75px;font-size:larger;text-decoration:none">
+      <p class="menu" style="font-weight: bold">DASHBOARD</p>
+    </a>
+    <a href="{{ url_for('apprend') }}" style="text-decoration:none;color:inherit">
+      <p class="menu">APPRENTISAGE</p>
+    </a>
+    <p class="menu">PRODUCTION</p>
+    <p class="menu">A PROPOS</p>
+    <p class="menu" style="padding-right:50px">CONTACT</p>
+  </nav>
+       <img class="logo" src="{{ url_for('static', filename='jarbot.png') }}"
+            alt="Logo" style="width: 200px; height: 100px; position: absolute; top: 0px; left: -30px;">
+ 
+
+  <div class="grid">
+    <svg class="grid-svg" xmlns="http://www.w3.org/2000/svg" width="982" height="786" viewBox="0 0 982 786" fill="none">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M490 401V537H348.5V401H490ZM490 785.5V676H348.5V785.5H347.5V676H206V785.5H205V676H63.5V785.5H62.5V676H0V675H62.5V538H0V537H62.5V401H0V400H62.5V258H0V257H62.5V116H0V115H62.5V0H63.5V115L205 115V0H206V115L347.5 115V0H348.5V115H490V0H491V115L627.5 115V0H628.5V115H765V0H766V115L902.5 115V0H903.5V115H982V116H903.5V257H982V258H903.5V400H982V401H903.5V537H982V538H903.5V675H982V676H903.5V785.5H902.5V676H766V785.5H765V676H628.5V785.5H627.5V676H491V785.5H490ZM902.5 675V538H766V675H902.5ZM902.5 537V401H766V537H902.5ZM902.5 400V258H766V400H902.5ZM902.5 257V116L766 116V257H902.5ZM627.5 675H491V538H627.5V675ZM765 675H628.5V538H765V675ZM348.5 675H490V538H348.5V675ZM347.5 538V675H206V538H347.5ZM205 538V675H63.5V538H205ZM765 537V401H628.5V537H765ZM765 400V258H628.5V400H765ZM765 257V116H628.5V257H765ZM347.5 401V537H206V401H347.5ZM205 401V537H63.5V401H205ZM627.5 401V537H491V401H627.5ZM627.5 116L491 116V257H627.5V116ZM627.5 258H491V400H627.5V258ZM63.5 257V116L205 116V257H63.5ZM63.5 400V258H205V400H63.5ZM206 116V257H347.5V116L206 116ZM348.5 116V257H490V116H348.5ZM206 400V258H347.5V400H206ZM348.5 258V400H490V258H348.5Z"
+        fill="url(#paint0_radial_1_8)" />
+      <defs>
+        <radialGradient id="paint0_radial_1_8" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+          gradientTransform="translate(491 392.75) rotate(90) scale(513.25 679.989)">
+          <stop stop-color="black" stop-opacity="0.8" />
+          <stop offset="1" stop-color="#000" stop-opacity="0" />
+        </radialGradient>
+      </defs>
+    </svg>
+    <div class="blur"></div>
+  </div>
+
+  <div class="title">
+    <p style="color:rgb(49, 27, 53)">JAR</p>
+    <p style="color:rgb(16, 7, 17)">CYBER RANGE</p>
+    <p style="color:rgb(49, 27, 53)">BOT</p>
+  </div>
+  <div>
+    <div>
+      <img src="https://www.uscyberrange.org/wp-content/uploads/2022/10/single_circuit.svg" style="position: absolute; top: 120px; left: 30px;">
+      <img src="https://www.uscyberrange.org/wp-content/uploads/2022/10/single_circuit_reverse.svg" style="position: absolute; bottom: -40px; right: 30px;">
+    </div>
+  <svg class="top-right" width="219" height="147" viewBox="0 0 219 147" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect opacity="0.7" x="10.4252" y="75.8326" width="7.50168" height="7.50168"
+      transform="rotate(110.283 10.4252 75.8326)" fill="black" stroke="black" stroke-width="1.22683" />
+    <rect opacity="0.7" x="180.869" y="138.825" width="7.50168" height="7.50168"
+      transform="rotate(110.283 180.869 138.825)" fill="black" stroke="black" stroke-width="1.22683" />
+    <rect x="69.4713" y="-91.84" width="180.485" height="180.485" transform="rotate(20.2832 69.4713 -91.84)"
+      stroke="black" stroke-opacity="0.7" stroke-width="1.22683" />
+  </svg>
+
+<svg class="bottom-left" width="232" height="191" viewBox="0 0 232 232" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="116" cy="116" r="110.068" stroke="black" stroke-opacity="0.7" />
+    <g opacity="0.7">
+        <path d="M116 5.932L116 226.068" stroke="black" />
+        <rect x="112.921" y="0.7" width="6.15753" height="6.15753" fill="black" stroke="black" />
+        <rect x="112.921" y="219.932" width="6.15753" height="6.15753" fill="black" stroke="black" />
+        <circle cx="116" cy="5.932" r="1.7774" fill="#323232" stroke="black" />
+    </g>
+</svg>
+</body>
+
+</html>
