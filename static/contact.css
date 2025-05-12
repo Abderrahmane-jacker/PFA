@@ -4,18 +4,19 @@
     --text: hsl(0, 0%, 0%);
     --textDim: hsl(0, 0%, 0%);
     --background: linear-gradient(-45deg,
-            #3f383f,
-            #9ba654,
-            #282525);
+                #3f383f,
+                #9ba654,
+                #282525);
     --primary: #ffffff;
     --primarys: hsl(214, 100%, 51%);
     --primaryBg: hsla(238, 56%, 65%, 0.485);
     --primaryHi: hsla(238, 53%, 41%, 0.5);
-    --primaryFg: hsl(0, 0%, 0%);
+    --primaryFg: hsl(0, 0%, 100%);
     --secondary: hsl(0, 100%, 51%);
     --secondaryFg: hsl(0, 0%, 0%);
     --secondaryBg: hsla(0, 100%, 75%, 0.726);
     --secondaryHi: hsla(0, 52%, 30%, 0.5);
+    --highlight: #ffc800;
 }
 
 body {
@@ -70,11 +71,7 @@ nav {
 
 }
 
-.sitename {
-    font-weight: bold;
-    padding-right: 2%;
-    font-size: 1.2rem;
-}
+
 
 .grid {
     position: absolute;
@@ -104,137 +101,6 @@ nav {
     position: absolute;
 }
 
-.title {
-    font-size: 10rem;
-    font-weight: 700;
-    letter-spacing: -0.8rem;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    justify-content: center;
-    align-self: center;
-    height: 100%;
-    z-index: 1000;
-}
-
-.title>p {
-    margin: 0;
-    line-height: 10rem;
-    width: auto;
-}
-
-.title>p:nth-child(1) {
-    align-self: flex-start;
-}
-
-.title>p:nth-child(2) {
-    color: var(--primary);
-    align-self: flex-end;
-}
-
-.title>p:nth-child(3) {
-    align-self: flex-end;
-}
-
-.material-icons {
-    display: none;
-    fill: var(--text);
-}
-
-
-
-.button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-    height: 50px;
-    width: 160px;
-    z-index: 9999;
-}
-
-button {
-    height: 50px;
-    width: 160px;
-    clip-path: path("M 0 25 C 0 -5, -5 0, 80 0 S 160 -5, 160 25, 165 50 80 50, 0 55, 0 25");
-    border: none;
-    border-radius: 13px;
-    background-color: var(--primaryBg);
-    box-shadow: 0px -3px 15px 0px var(--primaryHi) inset;
-    color: var(--primaryFg);
-    font-family: "Manrope";
-    font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    transform: translateY(0px);
-    transition: all 0.2s ease;
-}
-
-span {
-    width: 100px;
-    height: 60px;
-    background-color: var(--primaryHi);
-    border-radius: 100%;
-    filter: blur(20px);
-    position: absolute;
-    bottom: -50%;
-    transition: all 0.2s ease;
-}
-
-.button:hover>span {
-    opacity: 60%;
-}
-
-.button:hover>button {
-    transform: translateY(5px);
-}
-
-.button.first {
-    left: 24%;
-}
-
-.button.first>button {
-    background-color: var(--primaryBg);
-    box-shadow: 0px -3px 15px 0px var(--primarys) inset;
-    color: var(--primaryFg);
-}
-
-.button.sec {
-    top: 41%;
-    left: 3%;
-}
-
-.button.sec>button {
-    background-color: var(--accentBg);
-    box-shadow: 0px -3px 15px 0px var(--accentHi) inset;
-    color: var(--accentFg);
-}
-
-.button.sec>span {
-    background-color: var(--accentHi);
-}
-
-.button.third {
-
-    right: 24%;
-}
-
-.button.third>button {
-    background-color: var(--secondaryBg);
-    box-shadow: 0px -3px 15px 0px var(--secondary) inset;
-    color: var(--secondaryFg);
-}
-
-.button.third>span {
-    background-color: var(--secondaryHi);
-}
 
 
 .top-right {
@@ -273,6 +139,7 @@ span {
 
 .site-container {
 
+    margin-top: 30px;
     padding: auto;
     min-height: 100vh;
     padding-top: 1em;
@@ -280,18 +147,23 @@ span {
 
 
 .card {
-    width: 1300px;
-    height: auto;
+    width: 100%;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid var(--primary);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
-    background-color: rgba(25, 20, 20, 0.779);
-    opacity: 0.7;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.645);
-
+    background-color: rgba(15, 15, 15, 0.8);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(15px);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    padding: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .card-footer {
@@ -300,20 +172,31 @@ span {
 }
 
 .cyber-range-terminal {
-    color: #ffffff;
-    font-family: 'Manrope';
-    padding: 30px;
+    color: var(white);
+    padding: 0;
 }
 
 .terminal-header {
     font-weight: bold;
-    margin-bottom: 10px;
-    color: #000000;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
 }
 
-.terminal-body p {
-    margin: 10px 0;
-    font-size: 16px;
+.terminal-header:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--highlight);
+}
+
+.terminal-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .terminal-body .highlight {
@@ -322,83 +205,7 @@ span {
 }
 
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200,300,400,500,600,700,800,900&display=swap");
-
-
-
-.teams {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 75px;
-    padding-bottom: 20px;
-}
-
-.teams .cart {
-    position: relative;
-    width: 450px;
-    height: 300px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
-    border: 2px solid var(--primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.teams .cart .content {
-    position: absolute;
-    bottom: -160px;
-    width: 100%;
-    height: 160px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    flex-direction: column;
-    backdrop-filter: blur(15px);
-    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
-
-    transition: bottom 0.5s;
-    transition-delay: 0.8s;
-}
-
-.teams .cart:hover .content {
-    bottom: 0px;
-    transition-delay: 0s;
-}
-
-.teams .cart .content .contentBx h3 {
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.1em;
-    text-align: center;
-    margin: 5px 0 15px;
-    transition: 0.5s;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition-delay: 0.6s;
-}
-
-.teams .cart:hover .content .contentBx h3 {
-    opacity: 1;
-    transform: translateY(0px);
-}
-
-.teams .cart .content .contentBx h3 span {
-    font-size: 9px;
-    font-weight: 300;
-    text-transform: initial;
-}
-
-* Contact section with divider */ .contact-info {
+.contact-info {
     flex: 1;
     min-width: 300px;
     padding-right: 30px;
@@ -447,7 +254,7 @@ form {
 input,
 textarea {
     background-color: rgba(255, 255, 255, 0.05);
-    color: var(--text);
+    color: white;
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 15px;
     border-radius: 8px;
@@ -458,6 +265,7 @@ textarea {
 
 input:focus,
 textarea:focus {
+    color: white;
     outline: none;
     border-color: var(--primarys);
     background-color: rgba(255, 255, 255, 0.1);
@@ -473,7 +281,7 @@ button {
     align-self: flex-start;
     padding: 15px 30px;
     background-color: var(--primaryBg);
-    color: var(--primaryFg);
+    color: white;
     border: none;
     border-radius: 8px;
     font-family: 'Manrope', sans-serif;
@@ -529,7 +337,7 @@ button:hover:before {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: var(--textDim);
+    color: white;
     text-decoration: none;
     transition: all 0.3s ease;
     padding: 8px 15px;

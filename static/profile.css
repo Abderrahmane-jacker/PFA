@@ -4,8 +4,8 @@
     --text: hsl(0, 0%, 0%);
     --textDim: hsl(0, 0%, 0%);
     --background: linear-gradient(-45deg, #3f383f,
-                #bc2626c0,
-                #6d6464);
+            #bc2626c0,
+            #6d6464);
     --primary: #ffffff;
     --primarys: hsl(214, 100%, 51%);
     --primaryBg: hsla(238, 56%, 65%, 0.485);
@@ -998,4 +998,40 @@ form:valid #debt-amount-slider input:checked+label::before {
     height: 0;
     pointer-events: none;
     user-select: none;
+}
+
+.inputx,
+.textareax {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    color: #ffffff;
+}
+
+.inputx:focus {
+    outline: none;
+    border-color: var(--primarys);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(65, 105, 255, 0.3);
+}
+
+.textareax:focus {
+    outline: none;
+    border-color: var(--primarys);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(65, 105, 255, 0.3);
+}
+
+.inputx::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.textareax::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }

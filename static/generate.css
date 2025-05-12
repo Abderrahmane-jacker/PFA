@@ -1055,3 +1055,38 @@ form:invalid+button {
     pointer-events: none;
     user-select: none;
 }
+.inputx,
+.textareax {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    color: #ffffff;
+}
+
+.inputx:focus {
+    outline: none;
+    border-color: var(--primarys);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(65, 105, 255, 0.3);
+}
+
+.textareax:focus {
+    outline: none;
+    border-color: var(--primarys);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(65, 105, 255, 0.3);
+}
+
+.inputx::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.textareax::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}

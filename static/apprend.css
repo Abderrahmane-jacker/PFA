@@ -2,20 +2,20 @@
 
 :root {
     --text: hsl(0, 0%, 0%);
-    --textDim: hsl(0, 0%, 0%);
+        --textDim: hsl(0, 0%, 0%);
     --background: linear-gradient(-45deg,
                 #3f383f,
                 #9ba654,
-                #6d6464);
-    --primary: #ffffff;
-    --primarys: hsl(214, 100%, 51%);
-    --primaryBg: hsla(238, 56%, 65%, 0.485);
-    --primaryHi: hsla(238, 53%, 41%, 0.5);
-    --primaryFg: hsl(0, 0%, 0%);
-    --secondary: hsl(0, 100%, 51%);
-    --secondaryFg: hsl(0, 0%, 0%);
-    --secondaryBg: hsla(0, 100%, 75%, 0.726);
-    --secondaryHi: hsla(0, 52%, 30%, 0.5);
+                #282525);
+        --primary: #ffffff;
+        --primarys: hsl(214, 100%, 51%);
+        --primaryBg: hsla(238, 56%, 65%, 0.485);
+        --primaryHi: hsla(238, 53%, 41%, 0.5);
+        --primaryFg: hsl(0, 0%, 0%);
+        --secondary: hsl(0, 100%, 51%);
+        --secondaryFg: hsl(0, 0%, 0%);
+        --secondaryBg: hsla(0, 100%, 75%, 0.726);
+        --secondaryHi: hsla(0, 52%, 30%, 0.5);
 }
 
 body {
