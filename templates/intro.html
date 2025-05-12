@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blue Team Defense - Liste Emails</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='blueteam.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoolSite</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='blueteam.css') }}">
+</head>
 
 <body>
-
-  <!-- NEW NAV CONTAINER WRAPPER -->
     <nav
         style="border: 2px solid black; border-radius: 15px; background-color:rgba(203, 189, 189, 0.15);margin-top:10px">
         <a href="{{ url_for('main')}}" style="color:black;padding-left:75px;text-decoration:none;">
             <p class="menu">DASHBOARD</p>
         </a>
-        <a href="{{ url_for('apprend') }}" style="text-decoration:none;color:inherit">
+        <a href="{{ url_for('apprend') }}" style="text-decoration:none;color:inherit;font-weight: bold;font-size:larger">
             <p class="menu">APPRENTISAGE</p>
         </a>
-        <a href="{{ url_for('emaillist') }}" style="text-decoration:none;color:inherit;font-weight: bold;font-size:larger">
+        <a href="{{ url_for('emaillist') }}" style="text-decoration:none;color:inherit">
             <p class="menu">PRODUCTION</p>
         </a>
         <a href="{{ url_for('aboutus') }}" style="text-decoration:none;color:inherit">
@@ -31,7 +30,10 @@
     </nav>
        <img class="logo" src="{{ url_for('static', filename='jarbot.png') }}"
             alt="Logo" style="width: 200px; height: 100px; position: absolute; top: 0px; left: -30px;">
-<div class="grid">
+
+
+
+    <div class="grid">
     <svg class="grid-svg" xmlns="http://www.w3.org/2000/svg" width="982" height="786" viewBox="0 0 982 786" fill="none">
         <path fill-rule="evenodd" clip-rule="evenodd"
             d="M490 401V537H348.5V401H490ZM490 785.5V676H348.5V785.5H347.5V676H206V785.5H205V676H63.5V785.5H62.5V676H0V675H62.5V538H0V537H62.5V401H0V400H62.5V258H0V257H62.5V116H0V115H62.5V0H63.5V115L205 115V0H206V115L347.5 115V0H348.5V115H490V0H491V115L627.5 115V0H628.5V115H765V0H766V115L902.5 115V0H903.5V115H982V116H903.5V257H982V258H903.5V400H982V401H903.5V537H982V538H903.5V675H982V676H903.5V785.5H902.5V676H766V785.5H765V676H628.5V785.5H627.5V676H491V785.5H490ZM902.5 675V538H766V675H902.5ZM902.5 537V401H766V537H902.5ZM902.5 400V258H766V400H902.5ZM902.5 257V116L766 116V257H902.5ZM627.5 675H491V538H627.5V675ZM765 675H628.5V538H765V675ZM348.5 675H490V538H348.5V675ZM347.5 538V675H206V538H347.5ZM205 538V675H63.5V538H205ZM765 537V401H628.5V537H765ZM765 400V258H628.5V400H765ZM765 257V116H628.5V257H765ZM347.5 401V537H206V401H347.5ZM205 401V537H63.5V401H205ZM627.5 401V537H491V401H627.5ZM627.5 116L491 116V257H627.5V116ZM627.5 258H491V400H627.5V258ZM63.5 257V116L205 116V257H63.5ZM63.5 400V258H205V400H63.5ZM206 116V257H347.5V116L206 116ZM348.5 116V257H490V116H348.5ZM206 400V258H347.5V400H206ZM348.5 258V400H490V258H348.5Z"
@@ -47,49 +49,43 @@
     <div class="blur"></div>
 </div>
 
-  <div class="site-container">
-    <div class="card">
-      <div class="cyber-range-terminal">
-        <h2 class="terminal-header">root@Detection-Lab:~#📧 Liste des Emails</h2>
-        <div class="terminal-body" style="font-size: larger;" id="terminal-output"></div>
-        <div id="form-section" style="display:none;">
-          <div class="email-list" style="padding-left: 5%; padding-right: 5%;padding-bottom: 3%;">
-            {% for email in emails %}
-            <div class="email-item">
-              <div class="email-circle"></div>
-              <div class="email-content">
-                <a href="{{ url_for('email_detail', subject=email.subject) }}">
-                  <strong>Objet : {{ email.subject }}</strong>
-                </a>
-              </div>
+
+    <div class="site-container">
+      <div class="card">
+        <div class="cyber-range-terminal">
+          <h2 class="terminal-header">root@blueteam:~#Defend yourself</h2>
+          
+          <div class="terminal-output" style="font-size: larger;" id="terminal-output"></div>
+
+            <div id="form-section" style="display:none;position:absolute;bottom: 50px;right: 25px;margin-top:20px">
+              <a href="{{ url_for('email1') }}" class="button first">
+                <button >Next</button>
+                <span></span>
+              </a>
             </div>
-            {% else %}
-            <div class="email-item">
-              <div class="email-circle"></div>
-              <div class="email-content">
-                <a>
-                  <strong style="font-size">Objet : Aucun email disponible</strong>
-                </a>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
         </div>
+                  <p class="card-footer" style="margin-top: 20px; padding-left:30px">Created by JKR.ABDO</p>
       </div>
     </div>
-  </div>
-      <script>
+
+
+    <script>
         const lines = [
-            "root@Detection-Lab:~#📂 Mission Dashboard: You're now entering the Email Analysis Zone.",
+            "root@blueteam:~#🛡️ Welcome to the Blue Team Defense Arena",
             ">",
-            "root@Detection-Lab:~#📧 Here, you'll review a series of emails gathered from simulated threats.",
-            ">🔓 Each email includes sender and recipient details",
-            ">📝 Subject and full message content",
-            ">🔗 Any embedded links that may require deeper inspection",
-            ">🧾 A verdict and a generated incident report",
+            "root@blueteam:~#Thank you for joining this authorized Blue Team simulation. Your mission today focuses on:",
             ">",
-            "root@Detection-Lab:~#🧠 Use your Red Team skills to analyze patterns, detect threats, and learn from results.",
-            "root@Detection-Lab:~#🎮 Click an email to begin your analysis journey.",
+            ">🔎 Analyzing suspicious messages with the AI Security Assistant",
+            ">📊 Identifying potential threats based on contextual analysis and domain verification",
+            ">🛡️ Strengthening detection strategies against social engineering attacks",
+            ">",
+            "root@blueteam:~#This exercise is designed to validate AI-driven defense mechanisms and improve response readiness against evolving threats.",
+            ">",
+            "root@blueteam:~#Disclaimer: All message analysis occurs within a secure, consented environment with no real external communications.",
+            ">",
+            "root@blueteam:~#🚀 Analyze carefully. Prioritize intelligently. Defend proactively.",
+            ">",
+            "root@blueteam:~#Initializing AI detection systems... Please wait."
         ];
 
         let currentLine = 0;
@@ -110,13 +106,15 @@
                     setTimeout(typeLine, 300);
                 }
             } else {
-                    document.getElementById('form-section').style.display = 'block';
-            }
+                
+                document.getElementById('form-section').style.display = 'block';
+                
         }
+            }
         window.onload = typeLine;
-      </script>
+    </script>
 
-<svg class="top-right" width="219" height="147" viewBox="0 0 219 147" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="top-right" width="219" height="147" viewBox="0 0 219 147" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect opacity="0.7" x="10.4252" y="75.8326" width="7.50168" height="7.50168"
         transform="rotate(110.283 10.4252 75.8326)" fill="black" stroke="black" stroke-width="1.22683" />
     <rect opacity="0.7" x="180.869" y="138.825" width="7.50168" height="7.50168"
@@ -134,7 +132,6 @@
         <circle cx="116" cy="5.932" r="1.7774" fill="#323232" stroke="black" />
     </g>
 </svg>
-
 </body>
 
 </html>

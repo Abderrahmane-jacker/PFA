@@ -9,17 +9,25 @@
 </head>
 
 <body>
-  <nav style="border: 2px solid black; border-radius: 15px; background-color:rgba(203, 189, 189, 0.15);margin-top:10px">
-    <a href="{{ url_for('main')}}" style="color:black;padding-left:75px;text-decoration:none">
-      <p class="menu" >DASHBOARD</p>
-    </a>
-    <a href="{{ url_for('apprend') }}" style="color:black;font-size:larger;font-weight:bold;text-decoration:none">
-      <p class="menu">APPRENTISAGE</p>
-    </a>
-    <p class="menu">PRODUCTION</p>
-    <p class="menu">A PROPOS</p>
-    <p class="menu" style="padding-right:50px">CONTACT</p>
-  </nav>
+    <nav
+        style="border: 2px solid black; border-radius: 15px; background-color:rgba(203, 189, 189, 0.15);margin-top:10px">
+        <a href="{{ url_for('main')}}" style="color:black;padding-left:75px;text-decoration:none;">
+            <p class="menu">DASHBOARD</p>
+        </a>
+        <a href="{{ url_for('apprend') }}" style="text-decoration:none;color:inherit;font-weight: bold;font-size:larger">
+            <p class="menu">APPRENTISAGE</p>
+        </a>
+        <a href="{{ url_for('emaillist') }}" style="text-decoration:none;color:inherit">
+            <p class="menu">PRODUCTION</p>
+        </a>
+        <a href="{{ url_for('aboutus') }}" style="text-decoration:none;color:inherit">
+            <p class="menu">A PROPOS</p>
+        </a>
+        <a href="{{ url_for('contact') }}" style="text-decoration:none;color:inherit;">
+            <p class="menu">CONTACT</p>
+        </a>
+       
+    </nav>
        <img class="logo" src="{{ url_for('static', filename='jarbot.png') }}"
             alt="Logo" style="width: 200px; height: 100px; position: absolute; top: 0px; left: -30px;">
 
@@ -50,18 +58,7 @@
                 <div id="form-section" style="display: none;">
                     <h3>root@redteam:~#Enter the Infos below [If You Want To Test Time Your Email To check]<span class="cursor">█</span></h3>
                     <form autocomplete='off' class='form' method='POST' action="{{ url_for('send_email_route')}}">
-                        <div class='control block-cube block-input'>
-                            <input type="email" name="target_email" placeholder='Target Email' type='text' required>
-                            <div class='bg-top'>
-                                <div class='bg-inner'></div>
-                            </div>
-                            <div class='bg-right'>
-                                <div class='bg-inner'></div>
-                            </div>
-                            <div class='bg'>
-                                <div class='bg-inner'></div>
-                            </div>
-                        </div>
+                        <input class="inputx" name="target_email" placeholder="Target Email" required>
                         <a target="_blank" class="button third"><button type="submit">Generate Phishing Email</button><span></span></a>
                     </form>
                             <form method="GET" action="{{ url_for('download_email') }}">

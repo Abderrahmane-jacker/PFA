@@ -9,16 +9,28 @@
 </head>
 
 <body>
-    <div class="nav-container">
-      <nav>
-        <img src="jarbot_logo2.png" class="logo" alt="Logo" style="width: 200px; height: auto;" />
-        <p class="menu active">DashBoard</p>
-        <p class="menu">CyberRange</p>
-        <p class="menu">Production</p>
-        <p class="menu">Contact Us</p>
-        <p class="menu">About us</p>
-      </nav>
-    </div>
+    <nav
+        style="border: 2px solid black; border-radius: 15px; background-color:rgba(203, 189, 189, 0.15);margin-top:10px">
+        <a href="{{ url_for('main')}}" style="color:black;padding-left:75px;text-decoration:none;">
+            <p class="menu">DASHBOARD</p>
+        </a>
+        <a href="{{ url_for('apprend') }}" style="text-decoration:none;color:inherit">
+            <p class="menu">APPRENTISAGE</p>
+        </a>
+        <a href="{{ url_for('emaillist') }}" style="text-decoration:none;color:inherit;font-weight: bold;font-size:larger">
+            <p class="menu">PRODUCTION</p>
+        </a>
+        <a href="{{ url_for('aboutus') }}" style="text-decoration:none;color:inherit">
+            <p class="menu">A PROPOS</p>
+        </a>
+        <a href="{{ url_for('contact') }}" style="text-decoration:none;color:inherit;">
+            <p class="menu">CONTACT</p>
+        </a>
+       
+    </nav>
+       <img class="logo" src="{{ url_for('static', filename='jarbot.png') }}"
+            alt="Logo" style="width: 200px; height: 100px; position: absolute; top: 0px; left: -30px;">
+
 
 
     <div class="grid">
@@ -38,81 +50,68 @@
 </div>
 
 
-    <div class="grid">
-        <svg class="grid-svg" xmlns="http://www.w3.org/2000/svg" width="982" height="786" viewBox="0 0 982 786" fill="none">
-            <!-- Your SVG path here -->
-        </svg>
-        <div class="blur"></div>
-    </div>
-
     <div class="site-container">
         <div class="card">
             <div class="cyber-range-terminal">
                 <h2>root@Detection-Lab:~#</h2>
                 <div class="terminal-body" style="font-size: larger;" id="terminal-output"></div>
-
-                <!-- Loading dots -->
-                <div id="loading-dots" style="display: none;">
-                    <p>root@Detection-Lab:~#Initializing<span class="dots">.</span></p>
-                </div>
-            </div>
-
             <div id="form-section" style="display: none; margin-top: 20px;">
-                <div id="detection-section">
-                    <h3>📥 Message reçu :</h3>
-                    <div class="output-box">
-                        <pre>{{ body }}</pre>
-                    </div>
-
-                    <h3>📋 Verdict de l'IA :</h3>
-                    <div class="output-box">
-                        <p><strong>{{ verdict }}</strong> <span style="font-size:small;">(source : {{ source }})</span></p>
-                    </div>
-
-                   <div class="correction-box">
-                        <label for="force-verdict" class="correction-label">🔧 Corriger le verdict :</label>
-
-                        <details class="dropdown">
-                            <summary class="dropdown-button">
-                                Choisir une correction
-                            </summary>
-                            <ul class="dropdown-list">
-                                <li><a href="#">Forcer en Sûr</a></li>
-                                <li><a href="#">Forcer en Suspect</a></li>
-                                <li><a href="#">Forcer en Menace</a></li>
-                            </ul>
-                        </details>
-                    </div>
-                    </div>
-
-                    <h3>🧠 Rapport d'analyse :</h3>
-                    <div class="output-box">
-                        <pre>{{ rapport }}</pre>
-                    </div>
-
-                    {% if links %}
-                        <h3>🔗 Vérifications de domaines :</h3>
-                        <div class="output-box">
-                            <ul>
-                                {% for link in links %}
-                                    <li>{{ link }}</li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    {% endif %}
+                <div class="output-box">
+                    <h2>📧 Email:</h2>
+                    <h3>Subject:{{ email.subject }}</h3>
+                    <h2 style="text-align:center">📥 Message reçu :</h2>
+                    <textarea style="text-align:center;font-size:20px">{{ email.content }}</textarea>
+                   
                 </div>
-                        <p class="card-footer" style="margin-top: 50px; padding-left:30px">Created by Jaking.it</p>
-            </div>
-        </div>
 
+                <div class="output-box">
+                    <h2 style="text-align:center">📋 Verdict de l'IA :</h2>
+                    <p style="text-align:center;font-size:20px"><strong>{{ verdict }}</strong></p>
+                </div>
+    
+
+
+                <div class="output-box">
+                    <h2 style="text-align:center">🧠 Rapport d'analyse :</h2>
+                    <p style="text-align:center;font-size:20px">{{ rapport }}</p>
+                </div>
+
+                {% if links %}
+                <div class="output-box">
+                    <h2 style="text-align:center">🌐 Vérification WHOIS, MX, IP</h2>
+                    <ul>
+                        {% for result in links %}
+                        <div>
+                            <b>🔗 Domaine</b> : {{ result.domain }}<br>
+                            {% if result.mx %}
+                                <b>✅</b> MX trouvé {{ result.mx|join(', ') }}
+                            {% else %}
+                                <b>❌</b> Aucun MX
+                            {% endif %}<br>
+                            📄 WHOIS : <i>{{ result.whois.registrant_name }}</i>, Créé : <i>{{ result.whois.creation_date }}</i><br>
+                            🌍 IP : {{ result.ip }}<br>
+                        </div>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+            </div>
+            <p class="card-footer" style="margin-top: 50px; padding-left:30px">Created by Jaking.it</p>
+        </div>
+    </div>
 
     <script>
         const lines = [
-            "root@Detection-Lab:~#🛡️ Welcome to the Detection Prod Lab: ",
+            "root@Detection-Lab:~#📬 Incoming Intel: You've completed your classification mission.",
             ">",
-            "root@Detection-Lab:~# Scan your inbox for potential threats.",
+            "root@Detection-Lab:~#🕵️‍♂️ Next Phase: You will now review:",
+            ">🔍 The original email content",
+            ">⚖️ The verdict ",
+            ">🔗 Any links contained within the email",
+            ">📝 A generated incident report based on your analysis",
             ">",
-            "root@Detection-Lab:~#Initializing AI detection systems... Please wait."
+            "root@Detection-Lab:~#🧠 Use this to reinforce your learning and understand how phishing attempts are structured.",
         ];
 
         let currentLine = 0;
@@ -133,10 +132,7 @@
                     setTimeout(typeLine, 300);
                 }
             } else {
-                document.getElementById('loading-dots').style.display = 'block';
-                setTimeout(() => {
                     document.getElementById('form-section').style.display = 'block';
-                }, 2000);
             }
         }
 

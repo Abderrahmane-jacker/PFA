@@ -9,17 +9,25 @@
 </head>
 
 <body>
-  <nav style="border: 2px solid black; border-radius: 15px; background-color:rgba(203, 189, 189, 0.15);margin-top:10px">
-    <a href="{{ url_for('main')}}" style="color:black;padding-left:75px;font-size:larger;text-decoration:none">
-      <p class="menu" style="font-weight: bold">DASHBOARD</p>
-    </a>
-    <a href="{{ url_for('apprend') }}" style="text-decoration:none;color:inherit">
-      <p class="menu">APPRENTISAGE</p>
-    </a>
-    <p class="menu">PRODUCTION</p>
-    <p class="menu">A PROPOS</p>
-    <p class="menu" style="padding-right:50px">CONTACT</p>
-  </nav>
+  <nav
+        style="border: 2px solid black; border-radius: 15px; background-color:rgba(203, 189, 189, 0.15);margin-top:10px">
+        <a href="{{ url_for('main')}}" style="color:black;padding-left:75px;text-decoration:none;font-weight: bold;font-size:larger">
+            <p class="menu">DASHBOARD</p>
+        </a>
+        <a href="{{ url_for('apprend') }}" style="text-decoration:none;color:inherit">
+            <p class="menu">APPRENTISAGE</p>
+        </a>
+        <a href="{{ url_for('emaillist') }}" style="text-decoration:none;color:inherit">
+            <p class="menu">PRODUCTION</p>
+        </a>
+        <a href="{{ url_for('aboutus') }}" style="text-decoration:none;color:inherit">
+            <p class="menu">A PROPOS</p>
+        </a>
+        <a href="{{ url_for('contact') }}" style="text-decoration:none;color:inherit;">
+            <p class="menu">CONTACT</p>
+        </a>
+       
+    </nav>
        <img class="logo" src="{{ url_for('static', filename='jarbot.png') }}"
             alt="Logo" style="width: 200px; height: 100px; position: absolute; top: 0px; left: -30px;">
  

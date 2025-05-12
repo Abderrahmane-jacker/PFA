@@ -10,7 +10,7 @@
 
 <body>
 
-    <nav
+        <nav
         style="border: 2px solid black; border-radius: 15px; background-color:rgba(203, 189, 189, 0.15);margin-top:10px">
         <a href="{{ url_for('main')}}" style="color:black;padding-left:75px;text-decoration:none;">
             <p class="menu">DASHBOARD</p>
@@ -18,9 +18,16 @@
         <a href="{{ url_for('apprend') }}" style="text-decoration:none;color:inherit">
             <p class="menu">APPRENTISAGE</p>
         </a>
-        <p class="menu">PRODUCTION</p>
-        <p class="menu" style="font-size:larger;text-decoration:none;font-weight: bold">A PROPOS</p>
-        <p class="menu" style="padding-right:50px">CONTACT</p>
+        <a href="{{ url_for('emaillist') }}" style="text-decoration:none;color:inherit">
+            <p class="menu">PRODUCTION</p>
+        </a>
+        <a href="{{ url_for('aboutus') }}" style="text-decoration:none;color:inherit;font-weight: bold;font-size:larger">
+            <p class="menu">A PROPOS</p>
+        </a>
+        <a href="{{ url_for('contact') }}" style="text-decoration:none;color:inherit;">
+            <p class="menu">CONTACT</p>
+        </a>
+       
     </nav>
     <img class="logo" src="{{ url_for('static', filename='jarbot.png') }}" alt="Logo"
         style="width: 200px; height: 100px; position: absolute; top: 0px; left: -30px;">
@@ -51,7 +58,7 @@
                 <div class="terminal-body" style="font-size: larger;" id="terminal-output">
                 </div>
             </div>
-            <p class="card-footer" style="margin-top: 50px; padding-left:30px">Created by JKR.ABDO</p>
+            <p class="card-footer" style="margin-top: 50px; padding-left:30px">JRB Terminal</p>
         </div>
     </div>
     <script>
@@ -59,9 +66,9 @@
 
         const lines = [
             `root@Propos:~#Ce site est une plateforme Cyber Range interactive développée dans le cadre d'un Projet de Fin d'Année (PFA).
-        Il permet de simuler des attaques de type Red Team (scraping, phishing, ingénierie sociale) dans un environnement sécurisé
-        et immersif, gamifié sous forme de missions. L'objectif est d'offrir un espace d'entraînement réaliste aux professionnels
-        et étudiants en cybersécurité.`,
+            Il permet de simuler des attaques de type Red Team (scraping, phishing, ingénierie sociale) dans un environnement sécurisé
+            et immersif, gamifié sous forme de missions. L'objectif est d'offrir un espace d'entraînement réaliste aux professionnels
+            et étudiants en cybersécurité.`,
             "root@Propos:~#Le projet vise également à encourager une meilleure compréhension des tactiques adverses et à tester les capacités défensives en basculant vers une phase Blue Team.",
             "root@Propos:~#👨‍💻 Équipe du projet:",
             ">Saouf Abderrahmane (JKR.ABDO)- Développement backend & logique Red Team",
@@ -70,7 +77,7 @@
             ">Moho Amer Akram– Documentation, scénarisation & gestion de projet",
             "root@Propos:~#📫 Contact:",
             ">Email:cyberrange.pfa@exemple.com",
-            ">github:github.com/saouf-abderrahmane",
+            ">Github:https://github.com/Abderrahmane-jacker/PFA",
 
         ];
 

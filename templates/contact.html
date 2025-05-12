@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APropos</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='contact.css')}}">
+</head>
+
+<body>
+
+        <nav
+        style="border: 2px solid black; border-radius: 15px; background-color:rgba(203, 189, 189, 0.15);margin-top:10px">
+        <a href="{{ url_for('main')}}" style="color:black;padding-left:75px;text-decoration:none;">
+            <p class="menu">DASHBOARD</p>
+        </a>
+        <a href="{{ url_for('apprend') }}" style="text-decoration:none;color:inherit">
+            <p class="menu">APPRENTISAGE</p>
+        </a>
+        <a href="{{ url_for('emaillist') }}" style="text-decoration:none;color:inherit">
+            <p class="menu">PRODUCTION</p>
+        </a>
+        <a href="{{ url_for('aboutus') }}" style="text-decoration:none;color:inherit;">
+            <p class="menu">A PROPOS</p>
+        </a>
+        <a href="{{ url_for('contact') }}" style="text-decoration:none;color:inherit;font-weight: bold;font-size:larger">
+            <p class="menu">CONTACT</p>
+        </a>
+       
+    </nav>
+    <img class="logo" src="{{ url_for('static', filename='jarbot.png') }}" alt="Logo"
+        style="width: 200px; height: 100px; position: absolute; top: 0px; left: -30px;">
+
+    <div class="grid">
+        <svg class="grid-svg" xmlns="http://www.w3.org/2000/svg" width="982" height="786" viewBox="0 0 982 786"
+            fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M490 401V537H348.5V401H490ZM490 785.5V676H348.5V785.5H347.5V676H206V785.5H205V676H63.5V785.5H62.5V676H0V675H62.5V538H0V537H62.5V401H0V400H62.5V258H0V257H62.5V116H0V115H62.5V0H63.5V115L205 115V0H206V115L347.5 115V0H348.5V115H490V0H491V115L627.5 115V0H628.5V115H765V0H766V115L902.5 115V0H903.5V115H982V116H903.5V257H982V258H903.5V400H982V401H903.5V537H982V538H903.5V675H982V676H903.5V785.5H902.5V676H766V785.5H765V676H628.5V785.5H627.5V676H491V785.5H490ZM902.5 675V538H766V675H902.5ZM902.5 537V401H766V537H902.5ZM902.5 400V258H766V400H902.5ZM902.5 257V116L766 116V257H902.5ZM627.5 675H491V538H627.5V675ZM765 675H628.5V538H765V675ZM348.5 675H490V538H348.5V675ZM347.5 538V675H206V538H347.5ZM205 538V675H63.5V538H205ZM765 537V401H628.5V537H765ZM765 400V258H628.5V400H765ZM765 257V116H628.5V257H765ZM347.5 401V537H206V401H347.5ZM205 401V537H63.5V401H205ZM627.5 401V537H491V401H627.5ZM627.5 116L491 116V257H627.5V116ZM627.5 258H491V400H627.5V258ZM63.5 257V116L205 116V257H63.5ZM63.5 400V258H205V400H63.5ZM206 116V257H347.5V116L206 116ZM348.5 116V257H490V116H348.5ZM206 400V258H347.5V400H206ZM348.5 258V400H490V258H348.5Z"
+                fill="url(#paint0_radial_1_8)" />
+            <defs>
+                <radialGradient id="paint0_radial_1_8" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(491 392.75) rotate(90) scale(513.25 679.989)">
+                    <stop stop-color="black" stop-opacity="0.8" />
+                    <stop offset="1" stop-color="#000" stop-opacity="0" />
+                </radialGradient>
+            </defs>
+        </svg>
+        <div class="blur"></div>
+    </div>
+
+     <div class="site-container">
+        <div class="card">
+            <div class="card-header">
+                <div class="cyber-range-terminal">
+                    <h2 class="terminal-header" style="color:white">CONTACT US</h2>
+                </div>
+            </div>
+            
+            <div class="cyber-range-terminal" style="padding: 30px;">
+                <div class="terminal-body">
+                    <div class="contact-info">
+                        <h3 class="section-title">Our Information</h3>
+                        <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span style="color:white">+212 6 1234 5678</span>
+                        </p>
+                        <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span style="color:white">cyberrange.pfa@example.com</span>
+                        </p>
+                        <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span style="color:white">ENSAJ, Haouzia, El Jadida</span>
+                        </p>
+                        <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span style="color:white">Mon–Fri, 9:00–17:00 GMT</span>
+                        </p>
+                        
+                        <div class="social-links">
+                            <p style="color:white">Connect with us</p>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.5.5.6.3 1.1.7 1.5 1.2.4.5.8 1 .9 1.6.2.5.4 1.3.5 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.5 2.5-.3.6-.7 1.1-1.2 1.5-.5.4-1 .8-1.6.9-.5.2-1.3.4-2.5.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.5-.5-.6-.3-1.1-.7-1.5-1.2-.4-.5-.8-1-.9-1.6-.2-.5-.4-1.3-.5-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-2 .5-2.5.3-.6.7-1.1 1.2-1.5.5-.4 1-.8 1.6-.9.5-.2 1.3-.4 2.5-.5C8.4 2.2 8.8 2.2 12 2.2m0-2.2C8.7 0 8.3 0 7 0 5.6 0 4.6.2 3.8.5c-.9.4-1.6.9-2.3 1.6C.9 3.7.4 4.4.1 5.3.2 6.1 0 7.1 0 8.5c0 1.3 0 1.7 0 5s0 3.6.1 4.9c.1 1.4.3 2.4.6 3.2.4.9.9 1.6 1.6 2.3.7.7 1.4 1.2 2.3 1.6.8.3 1.8.5 3.2.6 1.3.1 1.7.1 4.9.1s3.6 0 4.9-.1c1.4-.1 2.4-.3 3.2-.6.9-.4 1.6-.9 2.3-1.6.7-.7 1.2-1.4 1.6-2.3.3-.8.5-1.8.6-3.2.1-1.3.1-1.7.1-4.9s0-3.6-.1-4.9c-.1-1.4-.3-2.4-.6-3.2-.4-.9-.9-1.6-1.6-2.3-.7-.7-1.4-1.2-2.3-1.6-.8-.3-1.8-.5-3.2-.6C15.6 0 15.2 0 12 0z"/>
+                                        <path d="M12 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+                                        <circle cx="18.4" cy="5.6" r="1.44"/>
+                                    </svg>
+                                    Instagram
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M24 4.5a9.83 9.83 0 0 1-2.82.77A4.93 4.93 0 0 0 23.34 3c-.94.56-1.99.96-3.1 1.18a4.92 4.92 0 0 0-8.39 4.48A13.95 13.95 0 0 1 1.64 3.15a4.92 4.92 0 0 0 1.52 6.57 4.91 4.91 0 0 1-2.23-.62v.06a4.93 4.93 0 0 0 3.95 4.83 4.96 4.96 0 0 1-2.22.08 4.94 4.94 0 0 0 4.6 3.42A9.89 9.89 0 0 1 0 19.54a13.94 13.94 0 0 0 7.55 2.21c9.06 0 14.01-7.51 14.01-14.01 0-.21 0-.43-.01-.64A10 10 0 0 0 24 4.5z"/>
+                                    </svg>
+                                    Twitter
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M4.98 3.5C3.34 3.5 2 4.84 2 6.48s1.34 2.98 2.98 2.98A2.99 2.99 0 0 0 8 6.48 2.99 2.99 0 0 0 4.98 3.5zM2.4 20.5h5.17V9.5H2.4v11zM9.66 9.5v11h5.17v-5.48c0-2.95 3.84-3.19 3.84 0V20.5H24v-6.71c0-6.14-6.63-5.92-8.33-2.89V9.5H9.66z"/>
+                                    </svg>
+                                    LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3 class="section-title">Send Us a Message</h3>
+                        <form>
+                            <input type="text" placeholder="Your Name" required>
+                            <input type="email" placeholder="Your Email" required>
+                            <textarea rows="5" placeholder="Your Message" required></textarea>
+                            <button type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card-footer">
+                <p>© 2025 CyberRange JRB</p>
+                <p>Created with ♥ by JRB</p>
+            </div>
+        </div>
+    </div>
+
+    <svg class="top-right" width="219" height="147" viewBox="0 0 219 147" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <rect opacity="0.7" x="10.4252" y="75.8326" width="7.50168" height="7.50168"
+            transform="rotate(110.283 10.4252 75.8326)" fill="black" stroke="black" stroke-width="1.22683" />
+        <rect opacity="0.7" x="180.869" y="138.825" width="7.50168" height="7.50168"
+            transform="rotate(110.283 180.869 138.825)" fill="black" stroke="black" stroke-width="1.22683" />
+        <rect x="69.4713" y="-91.84" width="180.485" height="180.485" transform="rotate(20.2832 69.4713 -91.84)"
+            stroke="black" stroke-opacity="0.7" stroke-width="1.22683" />
+    </svg>
+
+    <svg class="bottom-left" width="232" height="191" viewBox="0 0 232 232" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <circle cx="116" cy="116" r="110.068" stroke="black" stroke-opacity="0.7" />
+        <g opacity="0.7">
+            <path d="M116 5.932L116 226.068" stroke="black" />
+            <rect x="112.921" y="0.7" width="6.15753" height="6.15753" fill="black" stroke="black" />
+            <rect x="112.921" y="219.932" width="6.15753" height="6.15753" fill="black" stroke="black" />
+            <circle cx="116" cy="5.932" r="1.7774" fill="#323232" stroke="black" />
+        </g>
+    </svg>
+</body>
+
+</html>
