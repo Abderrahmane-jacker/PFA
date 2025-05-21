@@ -1,2 +1,2 @@
 # PFA
-pfa nadi ajmi dir like
+pfa nadi ajmi dir star for community
